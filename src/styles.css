@@ -1,0 +1,200 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Al-Kharsaah deck design system.
+ * Deep desert-night base, Qatar maroon + solar gold accents.
+ * All colors are oklch tokens — never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --animate-kenburns: kenburns 26s ease-in-out infinite alternate;
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.17 0.03 256);
+  --foreground: oklch(0.97 0.01 220);
+  --card: oklch(0.22 0.035 256);
+  --card-foreground: oklch(0.97 0.01 220);
+  --popover: oklch(0.22 0.035 256);
+  --popover-foreground: oklch(0.97 0.01 220);
+  --primary: oklch(0.44 0.132 256);
+  --primary-foreground: oklch(0.98 0.01 220);
+  --secondary: oklch(0.27 0.04 256);
+  --secondary-foreground: oklch(0.97 0.01 220);
+  --muted: oklch(0.27 0.035 256);
+  --muted-foreground: oklch(0.74 0.03 220);
+  --accent: oklch(0.692 0.12 164);
+  --accent-foreground: oklch(0.18 0.04 256);
+  --destructive: oklch(0.6 0.2 25);
+  --destructive-foreground: oklch(0.98 0.01 220);
+  --border: oklch(0.97 0.01 220 / 14%);
+  --input: oklch(0.97 0.01 220 / 16%);
+  --ring: oklch(0.692 0.12 164);
+
+  --gradient-brand: linear-gradient(
+    120deg,
+    oklch(0.44 0.132 256),
+    oklch(0.692 0.12 164)
+  );
+  --gradient-scrim: linear-gradient(
+      100deg,
+      oklch(0.14 0.03 256 / 92%) 0%,
+      oklch(0.14 0.03 256 / 74%) 48%,
+      oklch(0.14 0.03 256 / 55%) 100%
+    );
+  --gradient-scrim-soft: linear-gradient(
+      160deg,
+      oklch(0.14 0.03 256 / 74%) 0%,
+      oklch(0.14 0.03 256 / 40%) 55%,
+      oklch(0.14 0.03 256 / 78%) 100%
+    );
+  --gradient-grain: radial-gradient(
+    circle at 20% 20%,
+    oklch(0.692 0.12 164 / 10%),
+    transparent 55%
+  );
+  --shadow-plate: 0 28px 60px -28px oklch(0.06 0.03 256 / 85%);
+}
+
+
+@keyframes kenburns {
+  from {
+    transform: scale(1.04) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.14) translate3d(-1.5%, -1.5%, 0);
+  }
+}
+
+@utility glass-panel {
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--border);
+  background-color: color-mix(in oklab, var(--background) 62%, transparent);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-plate);
+}
+
+@utility story-link {
+  position: relative;
+  display: inline-block;
+}
+.story-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background-color: var(--accent);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+.story-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@utility glow-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 999px;
+    box-shadow:
+      0 0 8px var(--accent),
+      0 0 18px color-mix(in oklab, var(--accent) 70%, transparent);
+  }
+}
+
+@utility glow-scroll-x {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: color-mix(in oklab, var(--foreground) 8%, transparent);
+    border-radius: 999px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 999px;
+    box-shadow:
+      0 0 8px var(--accent),
+      0 0 18px color-mix(in oklab, var(--accent) 70%, transparent);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+}
