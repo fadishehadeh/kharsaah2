@@ -45,11 +45,11 @@ export function SlideView({
   slide: Slide;
   onSelect: (i: number) => void;
 }) {
-  const isTitle = slide.layout === "title";
+  const useSoftDim = slide.layout === "title" || slide.layout === "chapter";
 
   return (
     <section className="relative h-full w-full">
-      <SlideMedia media={slide.media} dim={isTitle ? "soft" : "strong"} />
+      <SlideMedia media={slide.media} dim={useSoftDim ? "soft" : "strong"} />
 
       <div data-slide-scroll className="relative z-10 h-full w-full overflow-y-auto overscroll-contain">
         <div className="mx-auto flex min-h-full max-w-7xl flex-col justify-center px-5 pt-32 pb-40 md:px-12 md:pt-36 md:pb-44">
@@ -268,6 +268,60 @@ export function SlideView({
                       </a>
                     )}
                   </motion.article>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {slide.layout === "chapter" && (
+            <div className="flex min-h-[calc(100vh-16rem)] flex-col justify-end">
+              <Reveal>
+                <p className="font-display text-[8rem] leading-none tracking-tight text-accent/15 select-none md:text-[11rem]">
+                  {slide.kicker}
+                </p>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <h2 className="mt-1 font-display text-5xl leading-tight tracking-tight text-balance md:text-7xl">
+                  {slide.title}
+                </h2>
+              </Reveal>
+              <Reveal delay={0.22}>
+                <div className="mt-4 h-px w-32 bg-[image:var(--gradient-brand)]" />
+              </Reveal>
+              <Reveal delay={0.3}>
+                <p className="mt-4 max-w-2xl text-lg leading-relaxed text-foreground/70 md:text-xl">
+                  {slide.lead}
+                </p>
+              </Reveal>
+            </div>
+          )}
+
+          {slide.layout === "stats" && (
+            <div>
+              <Reveal>
+                <Kicker slide={slide} />
+              </Reveal>
+              <Reveal delay={0.08}>
+                <h2 className="mt-3 font-display text-4xl tracking-tight md:text-6xl">
+                  {slide.title}
+                </h2>
+              </Reveal>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {slide.facts?.map((f, i) => (
+                  <motion.div
+                    key={f.label}
+                    initial={{ opacity: 0, y: 28, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ delay: 0.14 + i * 0.07, duration: 0.6, ease }}
+                    className="glass-panel flex flex-col gap-2 p-6"
+                  >
+                    <p className="font-display text-3xl leading-none text-accent md:text-4xl">
+                      {f.value}
+                    </p>
+                    <p className="font-mono text-[10px] tracking-[0.24em] text-foreground/60 uppercase">
+                      {f.label}
+                    </p>
+                  </motion.div>
                 ))}
               </div>
             </div>

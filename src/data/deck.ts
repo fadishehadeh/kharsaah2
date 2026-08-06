@@ -12,7 +12,24 @@ import arrayPanorama from "@/assets/array-panorama.jpg";
 import bifacialRow from "@/assets/bifacial-row.jpg";
 import singleRowPerspective from "@/assets/single-row-perspective.jpg";
 import heroLoopV3 from "@/assets/hero-loop-v3.mp4";
+import heroLoopV2 from "@/assets/hero-loop-v2.mp4";
+import panelCloseupLoop from "@/assets/panel-closeup-loop.mp4";
 import qatarMap from "@/assets/qatar-map.jpg";
+// Client-supplied images
+import client2 from "@/assets/client-2.jpg";
+import client20 from "@/assets/client-20.jpg";
+import client25 from "@/assets/client-25.jpg";
+import client27 from "@/assets/client-27.jpg";
+import client28 from "@/assets/client-28.jpg";
+import client29 from "@/assets/client-29.jpg";
+import client30 from "@/assets/client-30.jpg";
+import client33 from "@/assets/client-33.jpg";
+import client34 from "@/assets/client-34.jpg";
+import client39 from "@/assets/client-39.jpg";
+import client005 from "@/assets/client-005.jpg";
+import client0983 from "@/assets/client-0983.jpg";
+import client140230 from "@/assets/client-140230.jpg";
+import client140243 from "@/assets/client-140243.jpg";
 
 const photo = {
   aerialQatarLogo,
@@ -28,6 +45,21 @@ const photo = {
   arrayPanorama,
   bifacialRow,
   singleRowPerspective,
+  // client images
+  c2: client2,
+  c20: client20,
+  c25: client25,
+  c27: client27,
+  c28: client28,
+  c29: client29,
+  c30: client30,
+  c33: client33,
+  c34: client34,
+  c39: client39,
+  c005: client005,
+  c0983: client0983,
+  c140230: client140230,
+  c140243: client140243,
 };
 
 export type Media =
@@ -58,7 +90,7 @@ export type Slide = {
   /** Optional multi-image gallery shown in place of the single side image */
   gallery?: GalleryItem[];
 
-  layout: "title" | "toc" | "split" | "facts" | "timeline" | "rows" | "statement";
+  layout: "title" | "toc" | "split" | "facts" | "timeline" | "rows" | "statement" | "chapter" | "stats";
   media: Media;
 };
 
@@ -124,7 +156,7 @@ export const slides: Slide[] = [
     id: "at-a-glance",
     section: 2,
     sectionTitle: sections[1]!,
-    layout: "facts",
+    layout: "stats",
     kicker: "02 — At a glance",
     title: "Al-Kharsaah at a glance",
     facts: [
@@ -153,7 +185,7 @@ export const slides: Slide[] = [
           "Supplies renewable electricity to Qatar's national grid, avoiding hundreds of thousands of metric tons of CO₂ emissions annually",
       },
     ],
-    media: { kind: "image", src: photo.arrayPanorama, alt: "Solar panels sweeping toward the desert horizon" },
+    media: { kind: "image", src: photo.c2, alt: "Aerial overview of Al-Kharsaah solar panels" },
   },
 
   // 3
@@ -239,10 +271,20 @@ export const slides: Slide[] = [
       "In 2022, Al-Kharsaah delivered its first flow of electricity to the national grid. Within months, it reached full operational capacity, providing enough electricity to meet up to 10% of Qatar's peak energy demand and power hundreds of thousands of homes, while reducing carbon emissions by an estimated 26 million metric tons over its lifetime.",
       "Al-Kharsaah generates up to 800 megawatts-peak (MWp) DC, equivalent to 700 megawatts (MW) AC, supplying approximately 2,000 gigawatt-hours (GWh) of clean electricity to the national grid each year.",
     ],
-    media: { kind: "image", src: photo.arrayFenceWide, alt: "Wide view of the plant behind its perimeter fence" },
+    media: { kind: "image", src: photo.c140243, alt: "Al-Kharsaah site landscape" },
   },
 
   // 6 — sub-slides
+  {
+    id: "chapter-building",
+    section: 6,
+    sectionTitle: sections[5]!,
+    layout: "chapter",
+    title: sections[5]!,
+    kicker: "06",
+    lead: "How 1.8 million panels were designed, built, and connected to power Qatar.",
+    media: { kind: "image", src: photo.c28, alt: "Solar panels at Al-Kharsaah" },
+  },
   {
     id: "build-performance",
     section: 6,
@@ -264,7 +306,7 @@ export const slides: Slide[] = [
       { src: photo.panelsField, alt: "Panel field reaching the desert horizon", caption: "More than 1.8 million bifacial PV panels" },
     ],
     caption: "Effect of tilt on solar energy capture · Benefit of using a tracking system",
-    media: { kind: "image", src: photo.singleRowPerspective, alt: "Long tracker row angled toward the sun" },
+    media: { kind: "image", src: photo.c30, alt: "Solar tracker rows at Al-Kharsaah" },
   },
   {
     id: "build-cells",
@@ -333,7 +375,7 @@ export const slides: Slide[] = [
       { src: photo.arrayFenceWide, alt: "Wide view of the plant behind its perimeter fence", caption: "Approximately 3,240 inverters across both phases" },
     ],
     caption: "Project site layout and phase plan",
-    media: { kind: "image", src: photo.arrayPanorama, alt: "Elevated panorama over the aligned tracker rows" },
+    media: { kind: "image", src: photo.c20, alt: "Aligned tracker rows across the site" },
   },
   {
     id: "build-resource",
@@ -350,7 +392,7 @@ export const slides: Slide[] = [
       "The system layout enables future technology upgrades and supports the eventual reuse or recycling of solar components at end of life",
       "Electrical and control systems meet IEC and ISO sustainability standards, ensuring durability and safety in Qatar's desert environment",
     ],
-    media: { kind: "image", src: photo.panelsField, alt: "Panel field reaching the desert horizon" },
+    media: { kind: "image", src: photo.c25, alt: "Panel field at Al-Kharsaah" },
   },
   {
     id: "build-components",
@@ -405,7 +447,7 @@ export const slides: Slide[] = [
       { src: photo.aerialQatarLogoAlt, alt: "Aerial view of the plant", caption: "Access roads and drainage across the 10 km² site" },
     ],
     caption: "Facility and grid substations",
-    media: { kind: "image", src: photo.bifacialRow, alt: "Bifacial panels raised on their steel mounting structure" },
+    media: { kind: "image", src: photo.c28, alt: "Solar panel array at Al-Kharsaah" },
   },
   {
     id: "build-life",
@@ -437,7 +479,7 @@ export const slides: Slide[] = [
       "QatarEnergy conducted detailed surveys of the surrounding access roads to assess their capacity and condition, developing a comprehensive transport and logistics plan that addressed weight restrictions, turning radii, and timing constraints. In coordination with local authorities, the team obtained all necessary transport permits for oversized equipment.",
       "Within the site, QatarEnergy designed and constructed a network of internal roads engineered to handle frequent vehicle movements while minimizing dust and soil erosion — essential for maintaining PV panel performance and long-term accessibility.",
     ],
-    media: { kind: "image", src: photo.singleRowPerspective, alt: "Tracker row with its shadow across the desert floor" },
+    media: { kind: "image", src: photo.c29, alt: "Access road through the solar field" },
   },
   {
     id: "build-waste",
@@ -453,7 +495,7 @@ export const slides: Slide[] = [
       "Additional waste included packaging materials from photovoltaic equipment, food and organic waste from workforce facilities, reusable materials such as earth fill and PVC piping, non-recyclable waste including contaminated soil and damaged materials, sanitary waste, and limited quantities of hazardous waste such as paint residues and solvent containers.",
       "All construction-related waste was managed in accordance with the Construction Environmental Management Plan (CEMP), implemented by the EPC Contractor, defining clear accountabilities for segregation, storage, recycling, and disposal in full compliance with Qatari regulations.",
     ],
-    media: { kind: "image", src: photo.arrayFenceWide, alt: "Site infrastructure at the edge of the array" },
+    media: { kind: "image", src: photo.c33, alt: "Site infrastructure at Al-Kharsaah" },
   },
   {
     id: "build-om",
@@ -486,7 +528,7 @@ export const slides: Slide[] = [
       "The assessment verified that potential hazards and operational risks associated with construction, operation, and maintenance were systematically identified and mitigated.",
       "Residual risks, where applicable, were addressed through additional engineering controls and incorporated into the operation and maintenance manuals and project procedures.",
     ],
-    media: { kind: "image", src: photo.bifacialRow, alt: "Close view of a bifacial tracker row" },
+    media: { kind: "image", src: photo.c34, alt: "Panel mounting structures" },
   },
   {
     id: "build-operational-waste",
@@ -505,10 +547,20 @@ export const slides: Slide[] = [
     ],
     caption:
       "Preliminary envisaged drainage patterns · Impact of module tables on ground permeability",
-    media: { kind: "image", src: photo.panelsField, alt: "Rows of panels being maintained across the field" },
+    media: { kind: "image", src: photo.c39, alt: "Solar panels across the desert field" },
   },
 
   // 7
+  {
+    id: "chapter-impact",
+    section: 7,
+    sectionTitle: sections[6]!,
+    layout: "chapter",
+    title: sections[6]!,
+    kicker: "07",
+    lead: "Measurable progress on climate, ecology, and Qatar's long-term economic resilience.",
+    media: { kind: "image", src: photo.c005, alt: "Desert landscape at Al-Kharsaah" },
+  },
   {
     id: "impact-ecology",
     section: 7,
@@ -543,7 +595,7 @@ export const slides: Slide[] = [
       "Findings informed the project's environmental management approach, ensuring construction zones avoided key habitats wherever possible, with mitigation measures to protect native wildlife and preserve Qatar's natural desert ecology.",
     ],
     caption: "Potential spiny-tailed lizard burrows observed on site",
-    media: { kind: "image", src: photo.arrayPanorama, alt: "Panorama of the array stretching across the desert" },
+    media: { kind: "image", src: photo.c005, alt: "Desert landscape surrounding the solar field" },
   },
   {
     id: "impact-heritage",
@@ -558,7 +610,7 @@ export const slides: Slide[] = [
       "Following consultations and land-use approvals from municipal authorities, it was confirmed that no archaeological sites were present within the designated boundaries.",
       "To ensure continued diligence, a 'watching brief and chance finds' procedure was incorporated into the Construction Environmental Management Plan (CEMP) under the ESIA framework — ensuring any unexpected discoveries would be documented and managed responsibly, in line with Qatar's national heritage protection standards.",
     ],
-    media: { kind: "image", src: photo.arrayFenceWide, alt: "Qatari desert landscape around the plant" },
+    media: { kind: "image", src: photo.c0983, alt: "Qatari desert around the Al-Kharsaah plant" },
   },
   {
     id: "impact-economic",
@@ -578,10 +630,20 @@ export const slides: Slide[] = [
       "Operational responsibility: safe, reliable, and efficient plant operations, underpinned by strong asset integrity, performance monitoring, and international standards",
       "Social and economic development: local employment, technical skills, innovation, and long-term knowledge transfer supporting national capacity building",
     ],
-    media: { kind: "image", src: photo.aerialQatarLogo, alt: "Aerial view of the completed plant and its substation" },
+    media: { kind: "image", src: photo.c140230, alt: "Aerial view of the Al-Kharsaah plant" },
   },
 
   // 8
+  {
+    id: "chapter-people",
+    section: 8,
+    sectionTitle: sections[7]!,
+    layout: "chapter",
+    title: sections[7]!,
+    kicker: "08",
+    lead: "Over 800 professionals. 25 nationalities. One shared mission.",
+    media: { kind: "image", src: photo.aerialQatarLogo, alt: "Aerial view of Al-Kharsaah" },
+  },
   {
     id: "people-capability",
     section: 8,
@@ -596,7 +658,7 @@ export const slides: Slide[] = [
       "Specialized training programs upskilled local technicians in solar operations, maintenance planning, and performance optimization, introducing digital twin technology, real-time energy monitoring, and predictive maintenance analytics.",
       "The project also collaborated with local academic and research institutions to share technical knowledge and align future curricula with renewable energy competencies.",
     ],
-    media: { kind: "image", src: photo.singleRowPerspective, alt: "A single tracker row receding into the desert" },
+    media: { kind: "image", src: photo.arrayFenceWide, alt: "Wide view of the Al-Kharsaah plant" },
   },
   {
     id: "people-indicators",
@@ -623,7 +685,7 @@ export const slides: Slide[] = [
       },
     ],
     caption: "Values are approximate and based on project data and internal reporting.",
-    media: { kind: "image", src: photo.panelsDiagonal, alt: "Panel rows maintained across the site" },
+    media: { kind: "image", src: photo.c27, alt: "Solar panels at Al-Kharsaah" },
   },
   {
     id: "people-hse",
@@ -639,7 +701,7 @@ export const slides: Slide[] = [
       "More than 500,000 safe work-hours were recorded during peak construction periods without a lost-time incident. Regular training sessions and safety drills were conducted for all site personnel, supported by digital permit-to-work systems and real-time safety monitoring technologies.",
       "The project's safety performance set a benchmark for large-scale solar developments in Qatar, demonstrating that operational excellence and safety leadership go hand in hand.",
     ],
-    media: { kind: "image", src: photo.bifacialRow, alt: "Structural detail of the tracker mounts" },
+    media: { kind: "video", src: panelCloseupLoop, poster: photo.bifacialRow, alt: "Solar panel close-up footage" },
   },
   {
     id: "people-community",
@@ -655,10 +717,20 @@ export const slides: Slide[] = [
       "The project supported local awareness programs focused on sustainability, energy efficiency, and environmental protection, strengthening community understanding of renewable energy and its role in Qatar's long-term prosperity.",
       "Environmental monitoring continued beyond construction. Regular biodiversity assessments, soil surveys, and air quality checks ensure the surrounding ecosystem remains protected, and wildlife corridors established during design are maintained throughout operations.",
     ],
-    media: { kind: "image", src: photo.arrayPanorama, alt: "Open desert beyond the solar field" },
+    media: { kind: "image", src: photo.arrayHorizon, alt: "Desert landscape surrounding the solar field" },
   },
 
   // 9
+  {
+    id: "chapter-partners",
+    section: 9,
+    sectionTitle: sections[8]!,
+    layout: "chapter",
+    title: sections[8]!,
+    kicker: "09",
+    lead: "QatarEnergy, Marubeni, TotalEnergies and Kahramaa — a partnership built on shared ambition.",
+    media: { kind: "image", src: photo.aerialRows, alt: "Aerial view of Al-Kharsaah tracker rows" },
+  },
   {
     id: "partners-collab",
     section: 9,
@@ -724,10 +796,20 @@ export const slides: Slide[] = [
       "Global supply chain disruptions added complexity. The team coordinated multiple international suppliers through digital tracking systems and phased deliveries, maintaining the commissioning timeline despite pandemic-related delays.",
       "Integrating 800 MW into Qatar's national grid required close coordination with Kahramaa. Advanced inverters, supervisory control and data acquisition systems, and extensive grid stability testing ensured safe synchronization and reliable performance.",
     ],
-    media: { kind: "image", src: photo.singleRowPerspective, alt: "Panel row tracking the sun across open ground" },
+    media: { kind: "video", src: heroLoopV2, poster: photo.singleRowPerspective, alt: "Aerial footage of the Al-Kharsaah plant" },
   },
 
   // 11
+  {
+    id: "chapter-ahead",
+    section: 11,
+    sectionTitle: sections[10]!,
+    layout: "chapter",
+    title: sections[10]!,
+    kicker: "11",
+    lead: "From 800 MW to 4,000 MW — the road to Qatar's renewable future.",
+    media: { kind: "image", src: photo.c140230, alt: "Aerial view of the Al-Kharsaah plant" },
+  },
   {
     id: "ahead-next",
     section: 11,
@@ -758,7 +840,7 @@ export const slides: Slide[] = [
       "Future projects will emphasize hybridization, integrating Battery Energy Storage Systems (BESS), smart grid management, and data-driven optimization to ensure stable power delivery under variable solar conditions.",
       "In line with QatarEnergy's climate change framework, new facilities will employ carbon-neutral construction practices, expanded local content participation, and enhanced recycling and waste management frameworks.",
     ],
-    media: { kind: "image", src: photo.bifacialRow, alt: "Detail of the bifacial panel mounting system" },
+    media: { kind: "image", src: photo.panelsDiagonal, alt: "Tracker structures with rows of panels" },
   },
   {
     id: "ahead-legacy",
