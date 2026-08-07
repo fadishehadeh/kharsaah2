@@ -274,14 +274,14 @@ export function SlideView({
           )}
 
           {slide.layout === "chapter" && (
-            <div className="flex min-h-[calc(100vh-16rem)] flex-col justify-end">
+            <div className="flex min-h-[calc(100vh-16rem)] flex-col items-start justify-center">
               <Reveal>
                 <p className="font-display text-[8rem] leading-none tracking-tight text-accent/15 select-none md:text-[11rem]">
                   {slide.kicker}
                 </p>
               </Reveal>
               <Reveal delay={0.1}>
-                <h2 className="mt-1 font-display text-5xl leading-tight tracking-tight text-balance md:text-7xl">
+                <h2 className="-mt-4 font-display text-5xl leading-tight tracking-tight text-balance md:text-7xl">
                   {slide.title}
                 </h2>
               </Reveal>
@@ -302,27 +302,56 @@ export function SlideView({
                 <Kicker slide={slide} />
               </Reveal>
               <Reveal delay={0.08}>
-                <h2 className="mt-3 font-display text-4xl tracking-tight md:text-6xl">
+                <h2 className="mt-2 font-display text-2xl tracking-tight md:text-3xl">
                   {slide.title}
                 </h2>
               </Reveal>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-3 grid gap-2 grid-cols-2 md:grid-cols-3">
                 {slide.facts?.map((f, i) => (
                   <motion.div
                     key={f.label}
-                    initial={{ opacity: 0, y: 28, scale: 0.97 }}
+                    initial={{ opacity: 0, y: 20, scale: 0.97 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ delay: 0.14 + i * 0.07, duration: 0.6, ease }}
-                    className="glass-panel flex flex-col gap-2 p-6"
+                    className="glass-panel flex flex-col gap-1.5 p-4"
                   >
-                    <p className="font-display text-3xl leading-none text-accent md:text-4xl">
+                    <p className="font-display text-xl leading-tight text-accent md:text-2xl">
                       {f.value}
                     </p>
-                    <p className="font-mono text-[10px] tracking-[0.24em] text-foreground/60 uppercase">
+                    <p className="font-mono text-[9px] tracking-[0.24em] text-foreground/60 uppercase">
                       {f.label}
                     </p>
                   </motion.div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {slide.layout === "glossary" && (
+            <div className="flex flex-col h-full">
+              <Reveal>
+                <Kicker slide={slide} />
+              </Reveal>
+              <Reveal delay={0.08}>
+                <h2 className="mt-2 font-display text-3xl tracking-tight md:text-5xl">
+                  {slide.title}
+                </h2>
+              </Reveal>
+              <div className="glow-scroll mt-4 flex-1 overflow-y-auto pr-2" style={{ maxHeight: "calc(100vh - 22rem)" }}>
+                <div className="grid gap-x-8 gap-y-0 md:grid-cols-2">
+                  {slide.rows?.map((r, i) => (
+                    <motion.div
+                      key={r.key}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.1 + i * 0.025, duration: 0.4, ease }}
+                      className="border-b border-foreground/10 py-2.5"
+                    >
+                      <p className="text-sm font-semibold text-accent leading-snug">{r.key}</p>
+                      <p className="mt-0.5 text-xs leading-relaxed text-foreground/70">{r.value}</p>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </div>
           )}
