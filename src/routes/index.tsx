@@ -100,7 +100,7 @@ function Deck() {
 
       {/* Progress + controls */}
       <div className="pointer-events-none fixed inset-x-0 bottom-0 z-[60] flex justify-center p-5 md:p-8">
-        <div className="pointer-events-auto flex w-auto min-w-[min(22rem,90vw)] max-w-[min(32rem,92vw)] items-center gap-4 rounded-full border border-foreground/15 bg-background/85 px-5 py-3 backdrop-blur-xl shadow-lg md:gap-6 md:px-7 md:py-4">
+        <div className="pointer-events-auto flex w-[min(32rem,92vw)] items-center gap-4 rounded-full border border-foreground/15 bg-background/85 px-5 py-3 backdrop-blur-xl shadow-lg md:gap-6 md:px-7 md:py-4">
           <div className="min-w-0 flex-1">
             <p className="font-mono text-[10px] tracking-[0.28em] text-accent uppercase">
               {String(index + 1).padStart(2, "0")} / {slides.length}
