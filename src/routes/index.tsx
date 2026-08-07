@@ -107,7 +107,7 @@ function Deck() {
             </p>
             <p className="mt-0.5 truncate text-xs text-muted-foreground">
               {slide.sectionTitle}
-              {slide.subTitle ? ` — ${slide.subTitle}` : ""}
+              {slide.subTitle ? ` · ${slide.subTitle}` : ""}
             </p>
           </div>
           <div className="flex h-1.5 w-24 flex-1 overflow-hidden rounded-full bg-foreground/12 md:w-36">

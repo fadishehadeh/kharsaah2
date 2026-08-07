@@ -117,7 +117,7 @@ export const slides: Slide[] = [
     layout: "title",
     kicker: "QatarEnergy",
     title: "Al-Kharsaah Solar PV Power Plant",
-    lead: "Qatar's first large-scale solar power plant — a story of vision, partnership and lower-carbon energy.",
+    lead: "Qatar's first large-scale solar power plant, a story of vision, partnership and lower-carbon energy.",
     media: {
       kind: "video",
       src: heroLoopV3,
@@ -141,9 +141,9 @@ export const slides: Slide[] = [
     section: 1,
     sectionTitle: sections[0]!,
     layout: "split",
-    kicker: "01 — About",
+    kicker: "01 About",
     title: "About Al-Kharsaah",
-    lead: "This report captures the story of the Al-Kharsaah Solar PV Power Plant — a significant step in the State of Qatar's push to promote the development of renewable energy and achieve a lower-carbon future.",
+    lead: "This report captures the story of the Al-Kharsaah Solar PV Power Plant, a significant step in the State of Qatar's push to promote the development of renewable energy and achieve a lower-carbon future.",
     body: [
       "Developed under the leadership of QatarEnergy, in partnership with Qatar General Electricity and Water Corporation (Kahramaa), Marubeni, and TotalEnergies, the project demonstrates how vision and collaboration can transform ambition into achievement.",
       "The report follows the journey of Al-Kharsaah from concept to completion. It highlights the strategic foresight that guided its development, the engineering excellence that shaped its design, and the environmental and economic value it continues to deliver.",
@@ -158,7 +158,7 @@ export const slides: Slide[] = [
     section: 2,
     sectionTitle: sections[1]!,
     layout: "stats",
-    kicker: "02 — At a glance",
+    kicker: "02 At a glance",
     title: "Al-Kharsaah at a glance",
     facts: [
       { label: "Name", value: "Al-Kharsaah Solar PV Power Plant" },
@@ -195,7 +195,7 @@ export const slides: Slide[] = [
     section: 3,
     sectionTitle: sections[2]!,
     layout: "timeline",
-    kicker: "03 — Timeline",
+    kicker: "03 Timeline",
     title: "From memorandum to megawatts",
     timeline: [
       {
@@ -220,11 +220,11 @@ export const slides: Slide[] = [
       },
       {
         year: "2022",
-        text: "October 18 — the plant is energized and begins supplying Qatar's first large-scale solar power to the national grid, initially delivering 400 MW before reaching its full generation milestone of 800 MW.",
+        text: "October 18 the plant is energized and begins supplying Qatar's first large-scale solar power to the national grid, initially delivering 400 MW before reaching its full generation milestone of 800 MW.",
       },
       {
         year: "2022",
-        text: "October 25 — His Highness Sheikh Tamim bin Hamad Al Thani highlights Al-Kharsaah during the opening of the 51st session of the Shura Council, noting that the project covers 10% of Qatar's electricity consumption.",
+        text: "October 25 His Highness Sheikh Tamim bin Hamad Al Thani highlights Al-Kharsaah during the opening of the 51st session of the Shura Council, noting that the project covers 10% of Qatar's electricity consumption.",
         link: {
           label: "HH The Amir Inaugurates Shura Council's Ordinary Session",
           href: "https://www.youtube.com/results?search_query=HH+The+Amir+Inaugurates+Shura+Council%27s+Ordinary+Session",
@@ -244,7 +244,7 @@ export const slides: Slide[] = [
     section: 4,
     sectionTitle: sections[3]!,
     layout: "split",
-    kicker: "04 — National vision",
+    kicker: "04 National vision",
     title: "Maximizing Qatar's abundance of sunlight",
     lead: "Benefiting from Qatar's abundant sunlight and commitment to sustainability, the Al-Kharsaah Solar PV Power Plant marks a significant step in the ongoing efforts to develop and maximize the country's natural resources.",
     body: [
@@ -262,7 +262,7 @@ export const slides: Slide[] = [
     section: 5,
     sectionTitle: sections[4]!,
     layout: "split",
-    kicker: "05 — Origins",
+    kicker: "05 Origins",
     title: "The origins of the project",
     lead: "In 2015, QatarEnergy (formerly known as Qatar Petroleum) and Nebras Energy (formerly known as Qatar Electricity and Water Company) signed an agreement to investigate solar power generation.",
     body: [
@@ -275,7 +275,7 @@ export const slides: Slide[] = [
     media: { kind: "image", src: photo.c140243, alt: "Al-Kharsaah site landscape" },
   },
 
-  // 6 — sub-slides
+  // 6 sub-slides
   {
     id: "chapter-building",
     section: 6,
@@ -292,7 +292,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[5]!,
     subTitle: "Designed for performance",
     layout: "split",
-    kicker: "06.1 — Building the plant",
+    kicker: "06.1 Building the plant",
     title: "Designed for performance",
     lead: "Located approximately 80 kilometers west of Doha and covering approximately 10 square kilometers, Al-Kharsaah is one of the largest solar power plants in the Middle East. It is powered by more than 1.8 million photovoltaic (PV) panels.",
     body: [
@@ -315,7 +315,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[5]!,
     subTitle: "Selection of solar cells",
     layout: "split",
-    kicker: "06.2 — Building the plant",
+    kicker: "06.2 Building the plant",
     title: "Selection of solar cells",
     lead: "During the design stage, several PV cell technologies were evaluated to identify the optimal balance between efficiency, cost, and suitability for Qatar's desert conditions.",
     body: [
@@ -341,7 +341,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[5]!,
     subTitle: "Feasibility and site studies",
     layout: "split",
-    kicker: "06.3 — Building the plant",
+    kicker: "06.3 Building the plant",
     title: "Feasibility and site studies",
     lead: "Before construction began, extensive feasibility studies were undertaken to confirm that Al-Kharsaah was the best available location for Qatar's first large-scale solar power plant.",
     bullets: [
@@ -351,7 +351,7 @@ export const slides: Slide[] = [
     ],
     body: [
       "The results confirmed that Al-Kharsaah offered both the technical and environmental conditions necessary for a high-performing, large-scale solar facility.",
-      "Social considerations were a key part of the site studies, including the presence of nearby communities, schools, and local facilities. The assessments reviewed how people use the surrounding area day to day — school travel routes, access roads, and nearby services — to ensure safety and minimal disruption, supporting responsible, long-term development around Al-Kharsaah.",
+      "Social considerations were a key part of the site studies, including the presence of nearby communities, schools, and local facilities. The assessments reviewed how people use the surrounding area day to day: school travel routes, access roads, and nearby services, ensuring safety and minimal disruption and supporting responsible, long-term development around Al-Kharsaah.",
     ],
     media: { kind: "image", src: qatarMap, alt: "Site location study map" },
   },
@@ -361,14 +361,14 @@ export const slides: Slide[] = [
     sectionTitle: sections[5]!,
     subTitle: "Built with precision",
     layout: "split",
-    kicker: "06.4 — Building the plant",
+    kicker: "06.4 Building the plant",
     title: "Built with precision",
     lead: "The plant is divided into two identical phases, each made up of multiple 'AC blocks' containing inverters and transformers that convert the electricity produced by the solar panels into a form suitable for the power grid.",
     body: [
       "These inverters ensure that the power supplied to Qatar's national grid matches its required voltage and frequency, maintaining a stable and reliable supply of electricity.",
       "The PV modules are arranged throughout the site to maximize solar gain. Approximately 3,240 inverters are distributed across the two phases to convert electricity from DC to AC for efficient grid connection.",
       "At the peak of construction, more than 800 engineers, technicians, and specialists worked on-site, supported by digital project management systems that optimized scheduling, logistics, and safety.",
-      "Despite global supply chain disruption at the time, the project stayed on track through collaboration, adaptability, and effective planning — ensuring timely delivery without compromising quality.",
+      "Despite global supply chain disruption at the time, the project stayed on track through collaboration, adaptability, and effective planning, ensuring timely delivery without compromising quality.",
     ],
     gallery: [
       { src: photo.arrayPanorama, alt: "Elevated panorama over the aligned tracker rows", caption: "Project site layout and phase plan" },
@@ -384,9 +384,9 @@ export const slides: Slide[] = [
     sectionTitle: sections[5]!,
     subTitle: "A model of resource efficiency",
     layout: "split",
-    kicker: "06.5 — Building the plant",
+    kicker: "06.5 Building the plant",
     title: "A model of resource efficiency",
-    lead: "From concept to operation, Al-Kharsaah was designed for high performance and low environmental impact — guided by resource efficiency, circularity, and long-term sustainability.",
+    lead: "From concept to operation, Al-Kharsaah was designed for high performance and low environmental impact, guided by resource efficiency, circularity, and long-term sustainability.",
     bullets: [
       "No fuel combustion is involved in energy generation, resulting in zero direct emissions of CO₂, NO₂, SO₂, or particulates",
       "Recyclable materials, including aluminium and glass, were prioritized in the design of PV modules and support structures",
@@ -401,7 +401,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[5]!,
     subTitle: "Main project components",
     layout: "rows",
-    kicker: "06.6 — Building the plant",
+    kicker: "06.6 Building the plant",
     title: "Main project components",
     rows: [
       {
@@ -456,11 +456,11 @@ export const slides: Slide[] = [
     sectionTitle: sections[5]!,
     subTitle: "Extended operational life",
     layout: "split",
-    kicker: "06.7 — Building the plant",
+    kicker: "06.7 Building the plant",
     title: "Extended operational life",
     lead: "The plant was engineered for a minimum lifespan of 30 years.",
     body: [
-      "Its structural and electrical systems were designed to withstand Qatar's desert environment — high temperatures, dust, and wind exposure — while maintaining stable power generation efficiency.",
+      "Its structural and electrical systems were designed to withstand Qatar's desert environment (high temperatures, dust, and wind exposure) while maintaining stable power generation efficiency.",
       "Civil works were designed for a minimum lifespan of at least 30 years, ensuring that during this period no major structural repairs would be required due to wear, fatigue, or material distress.",
       "Advanced materials and construction techniques were used to enhance durability, reduce maintenance needs, and optimize long-term asset integrity.",
     ],
@@ -472,13 +472,13 @@ export const slides: Slide[] = [
     sectionTitle: sections[5]!,
     subTitle: "Access and transportation planning",
     layout: "split",
-    kicker: "06.8 — Building the plant",
+    kicker: "06.8 Building the plant",
     title: "Access and transportation planning",
     lead: "The Al-Kharsaah site required careful planning to ensure efficient and secure access for large-scale construction activities.",
     body: [
       "The nearest asphalt road, Umm Bab Road, lies roughly one kilometer from the site's southwestern boundary, while the recently constructed Dukhan Road provides a major route for transporting materials and equipment.",
       "QatarEnergy conducted detailed surveys of the surrounding access roads to assess their capacity and condition, developing a comprehensive transport and logistics plan that addressed weight restrictions, turning radii, and timing constraints. In coordination with local authorities, the team obtained all necessary transport permits for oversized equipment.",
-      "Within the site, QatarEnergy designed and constructed a network of internal roads engineered to handle frequent vehicle movements while minimizing dust and soil erosion — essential for maintaining PV panel performance and long-term accessibility.",
+      "Within the site, QatarEnergy designed and constructed a network of internal roads engineered to handle frequent vehicle movements while minimizing dust and soil erosion, essential for maintaining PV panel performance and long-term accessibility.",
     ],
     media: { kind: "image", src: photo.c29, alt: "Access road through the solar field" },
   },
@@ -488,7 +488,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[5]!,
     subTitle: "Construction phase waste management",
     layout: "split",
-    kicker: "06.9 — Building the plant",
+    kicker: "06.9 Building the plant",
     title: "Construction phase waste management",
     lead: "QatarEnergy implemented disciplined materials management practices to minimize waste generation and reduce the project's environmental footprint.",
     body: [
@@ -504,7 +504,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[5]!,
     subTitle: "Operations and maintenance concept",
     layout: "split",
-    kicker: "06.10 — Building the plant",
+    kicker: "06.10 Building the plant",
     title: "Operations and maintenance concept",
     lead: "The O&M concept was developed to ensure long-term operational reliability, safety, and environmental performance under Qatar's climatic conditions. The facility operates without combustion, generating electricity without greenhouse gas emissions or air pollutants.",
     bullets: [
@@ -522,7 +522,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[5]!,
     subTitle: "Hazard and operability study",
     layout: "statement",
-    kicker: "06.11 — Building the plant",
+    kicker: "06.11 Building the plant",
     title: "Hazard and operability study",
     lead: "A comprehensive HAZOP study was conducted during project execution to confirm the safety and operability of the facility, facilitated by an independent third-party specialist in accordance with IEC 61882.",
     body: [
@@ -537,11 +537,11 @@ export const slides: Slide[] = [
     sectionTitle: sections[5]!,
     subTitle: "Operational phase impacts and waste",
     layout: "split",
-    kicker: "06.12 — Building the plant",
+    kicker: "06.12 Building the plant",
     title: "Operational phase impacts and waste management",
     lead: "Panel cleaning is undertaken using fully automated robotic systems that operate without potable water or chemical agents.",
     body: [
-      "Four 'SunPower GB6' cleaning systems, comprising 24 autonomous robots operated by trained technicians, enable the full solar field to be cleaned in less than four days. Average water consumption is maintained below 0.1 liters per kilowatt-hour generated — a reduction of more than 90 percent compared to conventional cleaning methods.",
+      "Four 'SunPower GB6' cleaning systems, comprising 24 autonomous robots operated by trained technicians, enable the full solar field to be cleaned in less than four days. Average water consumption is maintained below 0.1 liters per kilowatt-hour generated, a reduction of more than 90 percent compared to conventional cleaning methods.",
       "Operational wastewater generation is minimal. Where practicable, wastewater is treated and reused for non-potable applications. Stormwater and drainage systems were designed in accordance with Kahramaa and Ministry of Municipality and Environment requirements, with effluent quality meeting Qatari regulations and IFC guidelines.",
       "Waste generation during operations is inherently low and largely limited to domestic waste and small quantities of maintenance-related materials. PV module disposal during routine operations is negligible due to an expected operational lifespan exceeding 30 years.",
       "An operational phase waste inventory defines management pathways following the hierarchy of reduction, reuse, and recycling, with residual waste disposed of through licensed facilities.",
@@ -568,7 +568,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[6]!,
     subTitle: "Protecting the desert ecosystem",
     layout: "split",
-    kicker: "07.1 — Impact",
+    kicker: "07.1 Impact",
     title: "Environmental and economic impact",
     lead: "Throughout construction and operation, specific measures were implemented to protect the native desert ecosystem and minimize environmental disturbance.",
     body: [
@@ -585,7 +585,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[6]!,
     subTitle: "Baseline data collection",
     layout: "split",
-    kicker: "07.2 — Impact",
+    kicker: "07.2 Impact",
     title: "Baseline data collection",
     bullets: [
       "Spiny-tailed lizard survey: a trained ecologist identified occupied burrows within and up to 50 meters beyond the project boundary, helping estimate the potential population affected by construction",
@@ -604,12 +604,12 @@ export const slides: Slide[] = [
     sectionTitle: sections[6]!,
     subTitle: "Archaeology and cultural heritage",
     layout: "statement",
-    kicker: "07.3 — Impact",
+    kicker: "07.3 Impact",
     title: "Archaeology and cultural heritage",
     lead: "William Sale Partnership Ltd. (WSP) worked alongside Qatar Museums to evaluate potential heritage sensitivities within the Al-Kharsaah project area.",
     body: [
       "Following consultations and land-use approvals from municipal authorities, it was confirmed that no archaeological sites were present within the designated boundaries.",
-      "To ensure continued diligence, a 'watching brief and chance finds' procedure was incorporated into the Construction Environmental Management Plan (CEMP) under the ESIA framework — ensuring any unexpected discoveries would be documented and managed responsibly, in line with Qatar's national heritage protection standards.",
+      "To ensure continued diligence, a 'watching brief and chance finds' procedure was incorporated into the Construction Environmental Management Plan (CEMP) under the ESIA framework, ensuring any unexpected discoveries would be documented and managed responsibly, in line with Qatar's national heritage protection standards.",
     ],
     media: { kind: "image", src: photo.c0983, alt: "Qatari desert around the Al-Kharsaah plant" },
   },
@@ -619,11 +619,11 @@ export const slides: Slide[] = [
     sectionTitle: sections[6]!,
     subTitle: "Economic growth and local value",
     layout: "split",
-    kicker: "07.4 — Impact",
+    kicker: "07.4 Impact",
     title: "Driving economic growth and local value",
     lead: "Through QatarEnergy, the project continues to strengthen Qatar's capability in solar operations and maintenance.",
     body: [
-      "Local technicians receive training in advanced monitoring systems, performance analysis, and predictive maintenance — essential skills underpinning the next generation of solar projects across Ras Laffan Industrial City, Mesaieed Industrial City, and the Dukhan Concession Area.",
+      "Local technicians receive training in advanced monitoring systems, performance analysis, and predictive maintenance, essential skills underpinning the next generation of solar projects across Ras Laffan Industrial City, Mesaieed Industrial City, and the Dukhan Concession Area.",
       "Al-Kharsaah brings together all three of QatarEnergy's sustainability pillars:",
     ],
     bullets: [
@@ -651,7 +651,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[7]!,
     subTitle: "Building national capability",
     layout: "split",
-    kicker: "08.1 — People",
+    kicker: "08.1 People",
     title: "Empowering people and communities",
     lead: "The Al-Kharsaah Solar PV Power Plant is also a story of people: the engineers, technicians, and local partners who turned a national vision into reality.",
     body: [
@@ -667,7 +667,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[7]!,
     subTitle: "People and community development",
     layout: "rows",
-    kicker: "08.2 — People",
+    kicker: "08.2 People",
     title: "People and community development",
     rows: [
       { key: "Jobs created during construction", value: "Over 800 professionals employed" },
@@ -694,7 +694,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[7]!,
     subTitle: "Health, safety, and wellbeing",
     layout: "split",
-    kicker: "08.3 — People",
+    kicker: "08.3 People",
     title: "Commitment to health, safety, and wellbeing",
     lead: "Ensuring the health and safety of everyone involved was a central principle throughout construction and commissioning.",
     body: [
@@ -710,7 +710,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[7]!,
     subTitle: "Community and environmental integration",
     layout: "split",
-    kicker: "08.4 — People",
+    kicker: "08.4 People",
     title: "Community and environmental integration",
     lead: "While the project site lies in a relatively remote area, the development team worked to ensure that Al-Kharsaah contributed positively to nearby communities.",
     body: [
@@ -729,7 +729,7 @@ export const slides: Slide[] = [
     layout: "chapter",
     title: sections[8]!,
     kicker: "09",
-    lead: "QatarEnergy, Marubeni, TotalEnergies and Kahramaa — a partnership built on shared ambition.",
+    lead: "QatarEnergy, Marubeni, TotalEnergies and Kahramaa, a partnership built on shared ambition.",
     media: { kind: "image", src: photo.aerialRows, alt: "Aerial view of Al-Kharsaah tracker rows" },
   },
   {
@@ -738,7 +738,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[8]!,
     subTitle: "Collaboration in action",
     layout: "split",
-    kicker: "09.1 — Partnerships",
+    kicker: "09.1 Partnerships",
     title: "Partnerships that drive change",
     lead: "The partnership model extended beyond ownership and governance. It was the foundation for day-to-day collaboration throughout design, construction, and commissioning.",
     bullets: [
@@ -757,9 +757,9 @@ export const slides: Slide[] = [
     sectionTitle: sections[8]!,
     subTitle: "The power purchase agreement",
     layout: "statement",
-    kicker: "09.2 — Partnerships",
+    kicker: "09.2 Partnerships",
     title: "The power purchase agreement with Kahramaa",
-    lead: "January 2020 saw the signing of a power purchase agreement (PPA) for Kahramaa to buy up to 800 MW of electricity — 10% of peak demand — from the project.",
+    lead: "January 2020 saw the signing of a power purchase agreement (PPA) for Kahramaa to buy up to 800 MW of electricity (10% of peak demand) from the project.",
     body: [
       "The agreement incorporates a build, own, operate, and transfer (BOOT) model and has a term of 25 years, after which ownership will be transferred to Kahramaa.",
       "This arrangement guarantees a stable supply of renewable electricity to the national grid, while ensuring reliability and long-term value for Qatar.",
@@ -772,23 +772,33 @@ export const slides: Slide[] = [
     sectionTitle: sections[8]!,
     subTitle: "Innovation and knowledge sharing",
     layout: "split",
-    kicker: "09.3 — Partnerships",
+    kicker: "09.3 Partnerships",
     title: "Innovation and knowledge sharing",
     lead: "Innovation lies at the heart of Al-Kharsaah's success.",
     body: [
       "The project incorporated smart control systems and data-driven operational platforms that monitor energy production, panel efficiency, and equipment status in real time. These technologies improve operational reliability and serve as valuable learning tools for Qatar's next generation of engineers and technicians.",
-      "By sharing lessons learned with upcoming solar projects, QatarEnergy continues to build a framework of best practices in design, environmental management, and stakeholder collaboration — transforming knowledge into a lasting national asset.",
+      "By sharing lessons learned with upcoming solar projects, QatarEnergy continues to build a framework of best practices in design, environmental management, and stakeholder collaboration, transforming knowledge into a lasting national asset.",
     ],
     media: { kind: "image", src: photo.panelsField, alt: "Panels tracking the sun across the field" },
   },
 
   // 10
   {
+    id: "chapter-challenges",
+    section: 10,
+    sectionTitle: sections[9]!,
+    layout: "chapter",
+    title: sections[9]!,
+    kicker: "10",
+    lead: "Delivering one of the region's largest solar plants demanded engineering precision, environmental care, and global coordination.",
+    media: { kind: "image", src: photo.singleRowPerspective, alt: "Rows of solar trackers at Al-Kharsaah" },
+  },
+  {
     id: "challenges",
     section: 10,
     sectionTitle: sections[9]!,
     layout: "split",
-    kicker: "10 — Resilience",
+    kicker: "10 Resilience",
     title: "Challenges and resilience",
     lead: "Delivering one of the region's largest solar power plants was an exciting challenge.",
     body: [
@@ -808,7 +818,7 @@ export const slides: Slide[] = [
     layout: "chapter",
     title: sections[10]!,
     kicker: "11",
-    lead: "From 800 MW to 4,000 MW — the road to Qatar's renewable future.",
+    lead: "From 800 MW to 4,000 MW: the road to Qatar's renewable future.",
     media: { kind: "image", src: photo.c140230, alt: "Aerial view of the Al-Kharsaah plant" },
   },
   {
@@ -817,13 +827,13 @@ export const slides: Slide[] = [
     sectionTitle: sections[10]!,
     subTitle: "The next phases",
     layout: "split",
-    kicker: "11.1 — Looking ahead",
+    kicker: "11.1 Looking ahead",
     title: "The next phases of Qatar's solar expansion",
     lead: "Al-Kharsaah represented the starting point of Qatar's large-scale solar development, establishing a solid foundation for continued expansion of reliable, efficient, and renewable power infrastructure.",
     bullets: [
       "Ras Laffan Industrial City Solar PV Power Plant: inaugurated in April 2025 with the capacity to generate 458 MW",
       "Mesaieed Industrial City Solar PV Power Plant: also inaugurated in April 2025, with a potential output of 417 MW",
-      "Dukhan Concession Area Solar PV Power Plant: announced September 2025, with 2,000 MW by mid-2029 — taking Qatar to the QNV 2030 target of 4,000 MW, around 30% of peak demand",
+      "Dukhan Concession Area Solar PV Power Plant: announced September 2025, with 2,000 MW by mid-2029, taking Qatar to the QNV 2030 target of 4,000 MW, around 30% of peak demand",
     ],
     media: { kind: "image", src: photo.arrayHorizon, alt: "Sunlit panels stretching to the horizon" },
   },
@@ -833,7 +843,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[10]!,
     subTitle: "Taking forward innovations",
     layout: "split",
-    kicker: "11.2 — Looking ahead",
+    kicker: "11.2 Looking ahead",
     title: "Taking forward innovations",
     lead: "The lessons learned from Al-Kharsaah are already informing future design and operational models.",
     body: [
@@ -849,9 +859,9 @@ export const slides: Slide[] = [
     sectionTitle: sections[10]!,
     subTitle: "A legacy of light",
     layout: "statement",
-    kicker: "11.3 — Looking ahead",
+    kicker: "11.3 Looking ahead",
     title: "A legacy of light",
-    lead: "The ambition is clear: to establish Qatar, by 2030, as a regional hub for renewable expertise — exporting not only energy, but also knowledge and capability.",
+    lead: "The ambition is clear: to establish Qatar, by 2030, as a regional hub for renewable expertise, exporting not only energy, but also knowledge and capability.",
     body: [
       "Through partnerships with global technology leaders and local universities, QatarEnergy Renewable Solutions aims to create a knowledge-driven clean energy sector, fostering innovation in solar technology, grid optimization, and environmental management.",
       "The Al-Kharsaah Solar PV Power Plant demonstrates how long-term planning, coordination, and commitment can deliver meaningful results. It reflects Qatar's practical approach to sustainability and its responsibility to meet the country's growing energy needs.",
@@ -865,7 +875,7 @@ export const slides: Slide[] = [
     sectionTitle: sections[11]!,
     layout: "glossary",
     title: "Glossary",
-    kicker: "12 — GLOSSARY",
+    kicker: "12 GLOSSARY",
     media: { kind: "image", src: photo.bifacialRow, alt: "Al-Kharsaah solar panel array" },
     rows: [
       { key: "AC (Alternating current)", value: "The form of electrical current used by the national grid, produced after conversion from direct current generated by solar panels." },
