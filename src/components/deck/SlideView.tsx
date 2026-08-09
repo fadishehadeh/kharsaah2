@@ -276,7 +276,7 @@ export function SlideView({
           {slide.layout === "chapter" && (
             <div className="flex min-h-[calc(100vh-16rem)] flex-col items-start justify-center">
               <Reveal>
-                <p className="font-display text-[8rem] leading-none tracking-tight text-accent/15 select-none md:text-[11rem]">
+                <p className="font-display text-[8rem] leading-none tracking-tight text-accent/40 select-none md:text-[11rem]">
                   {slide.kicker}
                 </p>
               </Reveal>
