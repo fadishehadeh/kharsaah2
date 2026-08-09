@@ -14,6 +14,10 @@ import singleRowPerspective from "@/assets/single-row-perspective.jpg";
 import heroLoopV3 from "@/assets/hero-loop-v3.mp4";
 import heroLoopV2 from "@/assets/hero-loop-v2.mp4";
 import panelCloseupLoop from "@/assets/panel-closeup-loop.mp4";
+import aerialClip1 from "@/assets/aerial-clip-1.mp4";
+import aerialClip2 from "@/assets/aerial-clip-2.mp4";
+import aerialClip3 from "@/assets/aerial-clip-3.mp4";
+import aerialClip4 from "@/assets/aerial-clip-4.mp4";
 import qatarMap from "@/assets/qatar-map.jpg";
 // Client-supplied images
 import client2 from "@/assets/client-2.jpg";
@@ -284,7 +288,7 @@ export const slides: Slide[] = [
     title: sections[5]!,
     kicker: "06",
     lead: "How 1.8 million panels were designed, built, and connected to power Qatar.",
-    media: { kind: "image", src: photo.c28, alt: "Solar panels at Al-Kharsaah" },
+    media: { kind: "video", src: aerialClip1, poster: photo.c28, alt: "Aerial footage of Al-Kharsaah solar panels" },
   },
   {
     id: "build-performance",
@@ -560,7 +564,7 @@ export const slides: Slide[] = [
     title: sections[6]!,
     kicker: "07",
     lead: "Measurable progress on climate, ecology, and Qatar's long-term economic resilience.",
-    media: { kind: "image", src: photo.c005, alt: "Desert landscape at Al-Kharsaah" },
+    media: { kind: "video", src: aerialClip2, poster: photo.c005, alt: "Aerial footage of Al-Kharsaah solar panels" },
   },
   {
     id: "impact-ecology",
@@ -643,7 +647,7 @@ export const slides: Slide[] = [
     title: sections[7]!,
     kicker: "08",
     lead: "Over 800 professionals. 25 nationalities. One shared mission.",
-    media: { kind: "image", src: photo.aerialQatarLogo, alt: "Aerial view of Al-Kharsaah" },
+    media: { kind: "video", src: aerialClip3, poster: photo.aerialQatarLogo, alt: "Aerial footage of Al-Kharsaah solar panels" },
   },
   {
     id: "people-capability",
@@ -819,7 +823,7 @@ export const slides: Slide[] = [
     title: sections[10]!,
     kicker: "11",
     lead: "From 800 MW to 4,000 MW: the road to Qatar's renewable future.",
-    media: { kind: "image", src: photo.c140230, alt: "Aerial view of the Al-Kharsaah plant" },
+    media: { kind: "video", src: aerialClip4, poster: photo.c140230, alt: "Aerial footage of Al-Kharsaah solar panels" },
   },
   {
     id: "ahead-next",

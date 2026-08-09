@@ -3,6 +3,7 @@ import type { Media } from "@/data/deck";
 
 export function SlideMedia({ media, dim = "strong" }: { media: Media; dim?: "strong" | "soft" }) {
   const [videoFailed, setVideoFailed] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
   const poster = media.kind === "video" ? media.poster : media.src;
 
   return (
@@ -10,18 +11,18 @@ export function SlideMedia({ media, dim = "strong" }: { media: Media; dim?: "str
       <img
         src={poster}
         alt={media.alt}
-        className="absolute inset-0 h-full w-full object-cover animate-kenburns"
+        className={`absolute inset-0 h-full w-full object-cover ${media.kind === "video" ? "" : "animate-kenburns"}`}
       />
       {media.kind === "video" && !videoFailed && (
         <video
           key={media.src}
-          className="absolute inset-0 h-full w-full object-cover"
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}
           src={media.src}
-          poster={poster}
           autoPlay
           muted
           loop
           playsInline
+          onCanPlay={() => setVideoReady(true)}
           onError={() => setVideoFailed(true)}
         />
       )}
