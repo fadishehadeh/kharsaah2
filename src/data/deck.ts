@@ -19,6 +19,17 @@ import aerialClip2 from "@/assets/aerial-clip-2.mp4";
 import aerialClip3 from "@/assets/aerial-clip-3.mp4";
 import aerialClip4 from "@/assets/aerial-clip-4.mp4";
 import qatarMap from "@/assets/qatar-map.jpg";
+import slide41 from "@/assets/slide4-1.jpg";
+import section6Slide1Jpg from "@/assets/section6-slide1.jpg";
+import section6Slide1Png from "@/assets/section6-slide1.png";
+import section6Slide2Jpg from "@/assets/section6-slide2.jpg";
+import section6Slide2q from "@/assets/section6-slide2q.jpg";
+import section6Slide4 from "@/assets/section6-slide4.png";
+import section6Slide6 from "@/assets/section6-slide6.jpg";
+import section6Slide10 from "@/assets/section6-slide10.jpg";
+import section6LastSlide from "@/assets/section6-lastslide.jpg";
+import section6LastSlide2 from "@/assets/section6-lastslide2.png";
+import section7Slide2 from "@/assets/section7-slide2.jpg";
 // Client-supplied images
 import client2 from "@/assets/client-2.jpg";
 import client20 from "@/assets/client-20.jpg";
@@ -64,6 +75,18 @@ const photo = {
   c0983: client0983,
   c140230: client140230,
   c140243: client140243,
+  // Section images
+  slide41,
+  s6Slide1: section6Slide1Jpg,
+  s6Slide1Chart: section6Slide1Png,
+  s6Slide2: section6Slide2Jpg,
+  s6Slide2q: section6Slide2q,
+  s6Slide4: section6Slide4,
+  s6Slide6: section6Slide6,
+  s6Slide10: section6Slide10,
+  s6LastSlide: section6LastSlide,
+  s6LastSlide2: section6LastSlide2,
+  s7Slide2: section7Slide2,
 };
 
 export type Media =
@@ -121,7 +144,7 @@ export const slides: Slide[] = [
     layout: "title",
     kicker: "QatarEnergy",
     title: "Al-Kharsaah Solar PV Power Plant",
-    lead: "Qatar's first large-scale solar power plant, a story of vision, partnership and lower-carbon energy.",
+    lead: "Qatar's first large-scale solar power plant: a story of vision, partnership, and renewable energy.",
     media: {
       kind: "video",
       src: heroLoopV3,
@@ -257,7 +280,7 @@ export const slides: Slide[] = [
       "In every respect, Al-Kharsaah is a symbol of how vision, partnership, and innovation can converge.",
     ],
     caption: "Location of the Al-Kharsaah Solar PV Power Plant within the State of Qatar",
-    media: { kind: "image", src: qatarMap, alt: "Map of Qatar showing the plant location" },
+    media: { kind: "image", src: photo.slide41, alt: "Satellite map of Qatar showing the Al-Kharsaah plant location" },
   },
 
   // 5
@@ -305,8 +328,8 @@ export const slides: Slide[] = [
       "These PV modules have an average conversion efficiency of 20%, while the tracking systems increase annual generation by approximately 15% to 20% compared to fixed-tilt systems.",
     ],
     gallery: [
-      { src: photo.singleRowPerspective, alt: "Long tracker row angled toward the sun", caption: "Effect of tilt on solar energy capture" },
-      { src: photo.panelsDiagonal, alt: "Tracker structures carrying long rows of panels", caption: "Benefit of using a tracking system" },
+      { src: photo.s6Slide1, alt: "Effect of tilt on solar energy capture", caption: "Effect of tilt on solar energy capture" },
+      { src: photo.s6Slide1Chart, alt: "Benefit of using a tracking system — output power vs time of day", caption: "Benefit of using a tracking system" },
       { src: photo.arrayHorizon, alt: "Tracker rows following the sun across the site", caption: "Single-axis trackers across the solar field" },
       { src: photo.panelsField, alt: "Panel field reaching the desert horizon", caption: "More than 1.8 million bifacial PV panels" },
     ],
@@ -332,8 +355,8 @@ export const slides: Slide[] = [
       "Superior performance under diffuse or low-light conditions",
     ],
     gallery: [
-      { src: photo.panelUnderside, alt: "Close-up of the mounting structure beneath a panel row", caption: "Ideematec bifacial tracker layout and specifications" },
-      { src: photo.bifacialRow, alt: "Bifacial panels raised on their steel mounting structure", caption: "Bifacial mono-c-Si modules capture reflected light" },
+      { src: photo.s6Slide2q, alt: "Ideematec bifacial tracker layout and specifications", caption: "Ideematec bifacial tracker layout and specifications" },
+      { src: photo.s6Slide2, alt: "Ideematec tracker renderings and desert installation", caption: "Bifacial mono-c-Si modules capture reflected light" },
       { src: photo.panelsPerimeter, alt: "Panel rows along the site boundary road", caption: "Module rows engineered for heat and sand resistance" },
     ],
     caption: "Ideematec bifacial tracker layout and specifications",
@@ -375,7 +398,7 @@ export const slides: Slide[] = [
       "Despite global supply chain disruption at the time, the project stayed on track through collaboration, adaptability, and effective planning, ensuring timely delivery without compromising quality.",
     ],
     gallery: [
-      { src: photo.arrayPanorama, alt: "Elevated panorama over the aligned tracker rows", caption: "Project site layout and phase plan" },
+      { src: photo.s6Slide4, alt: "Project site layout showing Phase 1 and Phase 2", caption: "Project site layout and phase plan" },
       { src: photo.aerialRows, alt: "Aerial view of tracker rows stretching across the site", caption: "Two identical phases of AC blocks" },
       { src: photo.arrayFenceWide, alt: "Wide view of the plant behind its perimeter fence", caption: "Approximately 3,240 inverters across both phases" },
     ],
@@ -447,7 +470,7 @@ export const slides: Slide[] = [
       },
     ],
     gallery: [
-      { src: photo.bifacialRow, alt: "Bifacial panels raised on their steel mounting structure", caption: "Facility and grid substations" },
+      { src: photo.s6Slide6, alt: "Facility and grid substations diagram showing Phase 1 and Phase 2 connections", caption: "Facility and grid substations" },
       { src: photo.panelsPerimeter, alt: "Perimeter and security infrastructure", caption: "Perimeter, lighting and security infrastructure" },
       { src: photo.aerialQatarLogoAlt, alt: "Aerial view of the plant", caption: "Access roads and drainage across the 10 km² site" },
     ],
@@ -518,7 +541,7 @@ export const slides: Slide[] = [
       "Comprehensive fire protection, drainage, wastewater management, and corrosion protection systems",
     ],
     caption: "Example of robotic cleaning system",
-    media: { kind: "image", src: photo.arrayFence, alt: "Panel rows viewed over the site fence" },
+    media: { kind: "image", src: photo.s6Slide10, alt: "SunPower GB6 robotic panel cleaning system" },
   },
   {
     id: "build-hazop",
@@ -550,8 +573,10 @@ export const slides: Slide[] = [
       "Waste generation during operations is inherently low and largely limited to domestic waste and small quantities of maintenance-related materials. PV module disposal during routine operations is negligible due to an expected operational lifespan exceeding 30 years.",
       "An operational phase waste inventory defines management pathways following the hierarchy of reduction, reuse, and recycling, with residual waste disposed of through licensed facilities.",
     ],
-    caption:
-      "Preliminary envisaged drainage patterns · Impact of module tables on ground permeability",
+    gallery: [
+      { src: photo.s6LastSlide, alt: "Topographic map showing preliminary envisaged drainage patterns", caption: "Preliminary envisaged drainage patterns" },
+      { src: photo.s6LastSlide2, alt: "Diagram showing impact of module tables on ground permeability", caption: "Impact of module tables on ground permeability" },
+    ],
     media: { kind: "image", src: photo.c39, alt: "Solar panels across the desert field" },
   },
 
@@ -600,7 +625,7 @@ export const slides: Slide[] = [
       "Findings informed the project's environmental management approach, ensuring construction zones avoided key habitats wherever possible, with mitigation measures to protect native wildlife and preserve Qatar's natural desert ecology.",
     ],
     caption: "Potential spiny-tailed lizard burrows observed on site",
-    media: { kind: "image", src: photo.c005, alt: "Desert landscape surrounding the solar field" },
+    media: { kind: "image", src: photo.s7Slide2, alt: "Potential spiny-tailed lizard burrow observed on site" },
   },
   {
     id: "impact-heritage",
