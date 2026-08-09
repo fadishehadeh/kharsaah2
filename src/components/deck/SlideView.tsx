@@ -315,7 +315,7 @@ export function SlideView({
                     transition={{ delay: 0.14 + i * 0.07, duration: 0.6, ease }}
                     className="glass-panel flex flex-col gap-1 p-4"
                   >
-                    <p className="font-mono text-[10px] tracking-[0.22em] text-foreground/75 uppercase">
+                    <p className="font-mono text-xs tracking-[0.18em] text-foreground/90 uppercase">
                       {f.label}
                     </p>
                     <p className="font-display text-xl leading-tight text-accent md:text-2xl">
