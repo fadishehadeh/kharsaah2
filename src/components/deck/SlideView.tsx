@@ -153,12 +153,12 @@ export function SlideView({
                 {slide.gallery ? (
                   <Gallery items={slide.gallery} />
                 ) : (
-                  <figure className="overflow-hidden rounded-2xl border border-foreground/12 shadow-[var(--shadow-plate)]">
+                  <figure className="overflow-hidden rounded-2xl border border-foreground/12 bg-white shadow-[var(--shadow-plate)]">
                     <img
                       src={slide.media.kind === "video" ? slide.media.poster : slide.media.src}
                       alt={slide.media.alt}
                       loading="lazy"
-                      className="aspect-4/3 w-full object-cover"
+                      className="aspect-4/3 w-full object-contain"
                     />
                     {slide.caption && (
                       <figcaption className="bg-background/70 px-4 py-3 text-xs text-muted-foreground backdrop-blur">
@@ -387,14 +387,14 @@ export function SlideView({
               </div>
               <Reveal delay={0.2}>
                 {slide.gallery ? (
-                  <Gallery items={slide.gallery} aspect="aspect-3/4" />
+                  <Gallery items={slide.gallery} />
                 ) : (
-                  <figure className="overflow-hidden rounded-2xl border border-foreground/12 shadow-[var(--shadow-plate)]">
+                  <figure className="overflow-hidden rounded-2xl border border-foreground/12 bg-white shadow-[var(--shadow-plate)]">
                     <img
                       src={slide.media.kind === "video" ? slide.media.poster : slide.media.src}
                       alt={slide.media.alt}
                       loading="lazy"
-                      className="aspect-3/4 w-full object-cover"
+                      className="aspect-4/3 w-full object-contain"
                     />
                   </figure>
                 )}

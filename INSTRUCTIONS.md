@@ -125,6 +125,19 @@ All assets live in `src/assets/`.
 
 ## Changelog
 
+### 2026-08-11
+
+- Replaced all 9 old section6 reference images with S2E-designed PNG graphics:
+  - Slide 06 (sunlight): Qatar map pin (Page 6.png)
+  - Slide 09 (build-performance): tilt diagram + tracking chart (Page 9A, 9B)
+  - Slide 10 (build-cells): tracker isometric + Ideematec specs (Page 10A, 10B)
+  - Slide 12 (build-precision): site layout plan (Page 12.png)
+  - Slide 14 (build-components): substation electrical diagram (Page 14.png)
+  - Slide 20 (build-operational-waste): drainage map + permeable ground diagram (Page 18A, 18B)
+- Gallery: white background (`bg-white`), `object-contain` (no cropping), `p-4 pb-0` padding so edges breathe
+- All image frames: landscape 4:3 (`aspect-4/3`) across split and rows layouts
+- Standalone right-panel figures (non-gallery): also `bg-white` + `object-contain`
+
 ### 2026-08-09
 
 - Increased stats card label size (`text-xs`) and opacity (`/90`) for better visibility
