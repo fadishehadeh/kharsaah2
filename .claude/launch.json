@@ -5,7 +5,8 @@
       "name": "Alkharsaa2 Dev",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
-      "port": 3000
+      "port": 8082,
+      "autoPort": true
     }
   ]
 }

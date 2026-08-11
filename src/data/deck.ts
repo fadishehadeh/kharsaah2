@@ -20,6 +20,15 @@ import aerialClip3 from "@/assets/aerial-clip-3.mp4";
 import aerialClip4 from "@/assets/aerial-clip-4.mp4";
 import qatarMap from "@/assets/qatar-map.jpg";
 import slide41 from "@/assets/slide4-1.jpg";
+import page6 from "@/assets/Page 6.png";
+import page9A from "@/assets/Page 9A.png";
+import page9B from "@/assets/Page 9B.png";
+import page10A from "@/assets/Page 10A.png";
+import page10B from "@/assets/Page 10B.png";
+import page12 from "@/assets/Page 12.png";
+import page14 from "@/assets/Page 14.png";
+import page18A from "@/assets/Page 18A.png";
+import page18B from "@/assets/Page 18B.png";
 import section6Slide1Jpg from "@/assets/section6-slide1.jpg";
 import section6Slide1Png from "@/assets/section6-slide1.png";
 import section6Slide2Jpg from "@/assets/section6-slide2.jpg";
@@ -77,6 +86,15 @@ const photo = {
   c140243: client140243,
   // Section images
   slide41,
+  page6,
+  page9A,
+  page9B,
+  page10A,
+  page10B,
+  page12,
+  page14,
+  page18A,
+  page18B,
   s6Slide1: section6Slide1Jpg,
   s6Slide1Chart: section6Slide1Png,
   s6Slide2: section6Slide2Jpg,
@@ -280,7 +298,7 @@ export const slides: Slide[] = [
       "In every respect, Al-Kharsaah is a symbol of how vision, partnership, and innovation can converge.",
     ],
     caption: "Location of the Al-Kharsaah Solar PV Power Plant within the State of Qatar",
-    media: { kind: "image", src: photo.slide41, alt: "Satellite map of Qatar showing the Al-Kharsaah plant location" },
+    media: { kind: "image", src: photo.page6, alt: "Map of Qatar showing the Al-Kharsaah Solar PV Power Plant location" },
   },
 
   // 5
@@ -328,8 +346,8 @@ export const slides: Slide[] = [
       "These PV modules have an average conversion efficiency of 20%, while the tracking systems increase annual generation by approximately 15% to 20% compared to fixed-tilt systems.",
     ],
     gallery: [
-      { src: photo.s6Slide1, alt: "Effect of tilt on solar energy capture", caption: "Effect of tilt on solar energy capture" },
-      { src: photo.s6Slide1Chart, alt: "Benefit of using a tracking system — output power vs time of day", caption: "Benefit of using a tracking system" },
+      { src: photo.page9A, alt: "Effect of tilt angle on solar energy capture", caption: "Effect of tilt on solar energy capture" },
+      { src: photo.page9B, alt: "Output power vs time of day — benefit of tracking system", caption: "Benefit of using a tracking system" },
       { src: photo.arrayHorizon, alt: "Tracker rows following the sun across the site", caption: "Single-axis trackers across the solar field" },
       { src: photo.panelsField, alt: "Panel field reaching the desert horizon", caption: "More than 1.8 million bifacial PV panels" },
     ],
@@ -355,8 +373,8 @@ export const slides: Slide[] = [
       "Superior performance under diffuse or low-light conditions",
     ],
     gallery: [
-      { src: photo.s6Slide2q, alt: "Ideematec bifacial tracker layout and specifications", caption: "Ideematec bifacial tracker layout and specifications" },
-      { src: photo.s6Slide2, alt: "Ideematec tracker renderings and desert installation", caption: "Bifacial mono-c-Si modules capture reflected light" },
+      { src: photo.page10A, alt: "Single-axis solar tracker isometric view and rotation positions", caption: "Single-axis tracker rotation range" },
+      { src: photo.page10B, alt: "Ideematec low-centre-of-gravity tracker — low-cost BOS and O&M benefits", caption: "Ideematec tracker: low-cost BOS and profitable O&M" },
       { src: photo.panelsPerimeter, alt: "Panel rows along the site boundary road", caption: "Module rows engineered for heat and sand resistance" },
     ],
     caption: "Ideematec bifacial tracker layout and specifications",
@@ -398,7 +416,7 @@ export const slides: Slide[] = [
       "Despite global supply chain disruption at the time, the project stayed on track through collaboration, adaptability, and effective planning, ensuring timely delivery without compromising quality.",
     ],
     gallery: [
-      { src: photo.s6Slide4, alt: "Project site layout showing Phase 1 and Phase 2", caption: "Project site layout and phase plan" },
+      { src: photo.page12, alt: "Project site layout showing Phase 1 and Phase 2 panel blocks", caption: "Project site layout and phase plan" },
       { src: photo.aerialRows, alt: "Aerial view of tracker rows stretching across the site", caption: "Two identical phases of AC blocks" },
       { src: photo.arrayFenceWide, alt: "Wide view of the plant behind its perimeter fence", caption: "Approximately 3,240 inverters across both phases" },
     ],
@@ -470,7 +488,7 @@ export const slides: Slide[] = [
       },
     ],
     gallery: [
-      { src: photo.s6Slide6, alt: "Facility and grid substations diagram showing Phase 1 and Phase 2 connections", caption: "Facility and grid substations" },
+      { src: photo.page14, alt: "Facility and grid substations electrical diagram — Phase 1 and Phase 2", caption: "Facility and grid substations" },
       { src: photo.panelsPerimeter, alt: "Perimeter and security infrastructure", caption: "Perimeter, lighting and security infrastructure" },
       { src: photo.aerialQatarLogoAlt, alt: "Aerial view of the plant", caption: "Access roads and drainage across the 10 km² site" },
     ],
@@ -574,8 +592,8 @@ export const slides: Slide[] = [
       "An operational phase waste inventory defines management pathways following the hierarchy of reduction, reuse, and recycling, with residual waste disposed of through licensed facilities.",
     ],
     gallery: [
-      { src: photo.s6LastSlide, alt: "Topographic map showing preliminary envisaged drainage patterns", caption: "Preliminary envisaged drainage patterns" },
-      { src: photo.s6LastSlide2, alt: "Diagram showing impact of module tables on ground permeability", caption: "Impact of module tables on ground permeability" },
+      { src: photo.page18A, alt: "Topographic map showing preliminary envisaged drainage patterns", caption: "Preliminary envisaged drainage patterns" },
+      { src: photo.page18B, alt: "Diagram showing permeable ground surface between PV tracker rows", caption: "Permeable ground surface between tracker rows" },
     ],
     media: { kind: "image", src: photo.c39, alt: "Solar panels across the desert field" },
   },

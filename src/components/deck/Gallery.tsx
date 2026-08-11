@@ -35,20 +35,22 @@ export function Gallery({ items, aspect = "aspect-4/3" }: { items: GalleryItem[]
 
   return (
     <>
-      <figure className="relative overflow-hidden rounded-2xl border border-foreground/12 shadow-[var(--shadow-plate)]">
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.img
-            key={current.src}
-            src={current.src}
-            alt={current.alt ?? ""}
-            loading="lazy"
-            initial={{ opacity: 0, scale: 1.02 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.35 }}
-            className={`${aspect} w-full object-cover`}
-          />
-        </AnimatePresence>
+      <figure className="relative overflow-hidden rounded-2xl border border-foreground/12 bg-white shadow-[var(--shadow-plate)]">
+        <div className="p-4 pb-0">
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.img
+              key={current.src}
+              src={current.src}
+              alt={current.alt ?? ""}
+              loading="lazy"
+              initial={{ opacity: 0, scale: 1.02 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.35 }}
+              className={`${aspect} w-full object-contain`}
+            />
+          </AnimatePresence>
+        </div>
 
         {items.length > 1 && (
           <>
@@ -121,7 +123,7 @@ export function Gallery({ items, aspect = "aspect-4/3" }: { items: GalleryItem[]
               <img
                 src={current.src}
                 alt={current.alt ?? ""}
-                className="mx-auto max-h-[80vh] w-auto rounded-2xl border border-foreground/12 object-contain"
+                className="mx-auto max-h-[80vh] w-auto rounded-2xl border border-foreground/12 bg-white object-contain"
               />
               <figcaption className="mt-4 text-center text-sm text-muted-foreground">
                 {current.caption ?? current.alt}
