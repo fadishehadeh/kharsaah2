@@ -6,6 +6,7 @@ import { slides } from "@/data/deck";
 import waveDecorAsset from "@/assets/wave-decor.png";
 import { DeckNav } from "@/components/deck/DeckNav";
 import { SlideView } from "@/components/deck/SlideView";
+import { use4KScreen } from "@/hooks/use4KScreen";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,6 +31,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Deck() {
+  const is4K = use4KScreen();
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -82,7 +84,7 @@ function Deck() {
         touchStart.current = null;
       }}
     >
-      <DeckNav open={menuOpen} onOpenChange={setMenuOpen} current={index} onSelect={goTo} />
+      <DeckNav open={menuOpen} onOpenChange={setMenuOpen} current={index} onSelect={goTo} is4K={is4K} />
 
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
@@ -94,7 +96,7 @@ function Deck() {
           transition={{ duration: 0.62, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0"
         >
-          <SlideView slide={slide} onSelect={goTo} />
+          <SlideView slide={slide} onSelect={goTo} is4K={is4K} />
         </motion.div>
       </AnimatePresence>
 

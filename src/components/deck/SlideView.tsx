@@ -41,9 +41,11 @@ function TextBox({ children, wide = false }: { children: React.ReactNode; wide?:
 export function SlideView({
   slide,
   onSelect,
+  is4K = false,
 }: {
   slide: Slide;
   onSelect: (i: number) => void;
+  is4K?: boolean;
 }) {
   const useSoftDim = slide.layout === "title" || slide.layout === "chapter";
 
@@ -52,7 +54,7 @@ export function SlideView({
       <SlideMedia media={slide.media} dim={useSoftDim ? "soft" : "strong"} />
 
       <div data-slide-scroll className="relative z-10 h-full w-full overflow-y-auto overscroll-contain">
-        <div className="mx-auto flex min-h-full max-w-7xl flex-col justify-center px-5 pt-32 pb-40 md:px-12 md:pt-36 md:pb-44">
+        <div className={`mx-auto flex min-h-full flex-col justify-center px-5 pb-40 md:pb-44 ${is4K ? "max-w-[1800px] px-24 pt-56 md:pt-64" : "max-w-7xl pt-32 md:px-12 md:pt-36"}`}>
           {slide.layout === "title" && (
             <div className="max-w-4xl">
               <Reveal>
@@ -61,7 +63,7 @@ export function SlideView({
                 </p>
               </Reveal>
               <Reveal delay={0.1}>
-                <h1 className="mt-4 font-display text-5xl leading-[0.95] tracking-tight text-balance md:text-8xl">
+                <h1 className={`mt-4 font-display leading-[0.95] tracking-tight text-balance ${is4K ? "text-8xl md:text-[10rem]" : "text-5xl md:text-8xl"}`}>
                   {slide.title}
                 </h1>
               </Reveal>
@@ -69,7 +71,7 @@ export function SlideView({
                 <div className="mt-3 h-px w-40 bg-[image:var(--gradient-brand)]" />
               </Reveal>
               <Reveal delay={0.3}>
-                <p className="mt-3 max-w-xl text-lg leading-relaxed text-foreground/80 md:text-xl">
+                <p className={`mt-3 leading-relaxed text-foreground/80 ${is4K ? "max-w-3xl text-2xl md:text-3xl" : "max-w-xl text-lg md:text-xl"}`}>
                   {slide.lead}
                 </p>
               </Reveal>
@@ -153,12 +155,12 @@ export function SlideView({
                 {slide.gallery ? (
                   <Gallery items={slide.gallery} />
                 ) : (
-                  <figure className="overflow-hidden rounded-2xl border border-foreground/12 bg-white shadow-[var(--shadow-plate)]">
+                  <figure className="overflow-hidden rounded-2xl border border-foreground/12 shadow-[var(--shadow-plate)]">
                     <img
                       src={slide.media.kind === "video" ? slide.media.poster : slide.media.src}
                       alt={slide.media.alt}
                       loading="lazy"
-                      className="aspect-4/3 w-full object-contain"
+                      className="aspect-4/3 w-full object-cover"
                     />
                     {slide.caption && (
                       <figcaption className="bg-background/70 px-4 py-3 text-xs text-muted-foreground backdrop-blur">
@@ -276,12 +278,12 @@ export function SlideView({
           {slide.layout === "chapter" && (
             <div className="flex min-h-[calc(100vh-16rem)] flex-col items-start justify-center">
               <Reveal>
-                <p className="font-display text-[8rem] leading-none tracking-tight text-accent/40 select-none md:text-[11rem]">
+                <p className={`font-display leading-none tracking-tight text-accent/40 select-none ${is4K ? "text-[10rem] md:text-[14rem]" : "text-[6rem] md:text-[8rem]"}`}>
                   {slide.kicker}
                 </p>
               </Reveal>
               <Reveal delay={0.1}>
-                <h2 className="-mt-4 font-display text-5xl leading-tight tracking-tight text-balance md:text-7xl">
+                <h2 className={`-mt-4 font-display leading-tight tracking-tight text-balance ${is4K ? "text-7xl md:text-9xl" : "text-5xl md:text-7xl"}`}>
                   {slide.title}
                 </h2>
               </Reveal>
@@ -389,12 +391,12 @@ export function SlideView({
                 {slide.gallery ? (
                   <Gallery items={slide.gallery} />
                 ) : (
-                  <figure className="overflow-hidden rounded-2xl border border-foreground/12 bg-white shadow-[var(--shadow-plate)]">
+                  <figure className="overflow-hidden rounded-2xl border border-foreground/12 shadow-[var(--shadow-plate)]">
                     <img
                       src={slide.media.kind === "video" ? slide.media.poster : slide.media.src}
                       alt={slide.media.alt}
                       loading="lazy"
-                      className="aspect-4/3 w-full object-contain"
+                      className="aspect-4/3 w-full object-cover"
                     />
                   </figure>
                 )}

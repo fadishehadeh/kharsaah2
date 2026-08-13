@@ -8,9 +8,10 @@ type Props = {
   onOpenChange: (v: boolean) => void;
   current: number;
   onSelect: (i: number) => void;
+  is4K?: boolean;
 };
 
-export function DeckNav({ open, onOpenChange, current, onSelect }: Props) {
+export function DeckNav({ open, onOpenChange, current, onSelect, is4K = false }: Props) {
   const grouped = sections.map((title, idx) => ({
     title,
     number: idx + 1,
@@ -25,15 +26,15 @@ export function DeckNav({ open, onOpenChange, current, onSelect }: Props) {
         <img
           src={logoAsset}
           alt="QatarEnergy"
-          className="pointer-events-auto h-24 w-auto md:h-32"
+          className={`pointer-events-auto w-auto ${is4K ? "h-48" : "h-24 md:h-32"}`}
           draggable={false}
         />
         <button
           onClick={() => onOpenChange(true)}
-          className="pointer-events-auto mt-3 group rounded-full border border-foreground/15 bg-background/40 p-3 backdrop-blur-xl transition-colors hover:border-accent/60"
+          className={`pointer-events-auto group rounded-full border border-foreground/15 bg-background/40 backdrop-blur-xl transition-colors hover:border-accent/60 ${is4K ? "mt-6 ml-6 p-5" : "ml-3 p-3"}`}
           aria-label="Open contents menu"
         >
-          <Menu className="h-5 w-5 text-foreground/80 transition-transform group-hover:rotate-90" />
+          <Menu className={`${is4K ? "h-7 w-7" : "h-5 w-5"} text-foreground/80 transition-transform group-hover:rotate-90`} />
         </button>
       </header>
 
@@ -46,7 +47,7 @@ export function DeckNav({ open, onOpenChange, current, onSelect }: Props) {
             transition={{ duration: 0.35 }}
             className="fixed inset-0 z-[60] overflow-y-auto bg-background/92 backdrop-blur-2xl"
           >
-            <div className="mx-auto max-w-5xl px-6 py-8 md:px-10 md:py-12">
+            <div className={`mx-auto px-6 py-8 md:px-10 md:py-12 ${is4K ? "max-w-7xl" : "max-w-5xl"}`}>
               <div className="mb-10 flex items-center justify-between">
                 <p className="font-display text-xs tracking-[0.3em] text-accent uppercase">
                   Contents
@@ -79,7 +80,7 @@ export function DeckNav({ open, onOpenChange, current, onSelect }: Props) {
                       <span className="font-mono text-xs text-accent">
                         {String(g.number).padStart(2, "0")}
                       </span>
-                      <span className="font-display text-xl leading-tight transition-colors group-hover:text-accent md:text-2xl">
+                      <span className={`font-display leading-tight transition-colors group-hover:text-accent ${is4K ? "text-3xl md:text-4xl" : "text-xl md:text-2xl"}`}>
                         {g.title}
                       </span>
                     </button>

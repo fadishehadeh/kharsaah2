@@ -2,6 +2,57 @@
 @source "../src";
 @import "tw-animate-css";
 
+/* ── GreyCliff CF (licensed) ───────────────────────────────────────────── */
+@font-face {
+  font-family: "GreyCliff CF";
+  src: url("./assets/fonts/GreycliffCF-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GreyCliff CF";
+  src: url("./assets/fonts/GreycliffCF-LightOblique.otf") format("opentype");
+  font-weight: 300;
+  font-style: oblique;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GreyCliff CF";
+  src: url("./assets/fonts/GreycliffCF-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GreyCliff CF";
+  src: url("./assets/fonts/GreycliffCF-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GreyCliff CF";
+  src: url("./assets/fonts/GreycliffCF-DemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GreyCliff CF";
+  src: url("./assets/fonts/GreycliffCF-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GreyCliff CF";
+  src: url("./assets/fonts/GreycliffCF-BoldOblique.otf") format("opentype");
+  font-weight: 700;
+  font-style: oblique;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*
@@ -37,8 +88,8 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
-  --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "GreyCliff CF", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "GreyCliff CF", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --animate-kenburns: kenburns 26s ease-in-out infinite alternate;
 }
