@@ -26,7 +26,7 @@ export function DeckNav({ open, onOpenChange, current, onSelect, is4K = false }:
         <img
           src={logoAsset}
           alt="QatarEnergy"
-          className={`pointer-events-auto w-auto ${is4K ? "h-48" : "h-24 md:h-32"}`}
+          className={`pointer-events-auto w-auto ${is4K ? "h-48" : "h-28 md:h-40"}`}
           draggable={false}
         />
         <button
