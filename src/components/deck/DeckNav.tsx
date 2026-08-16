@@ -31,7 +31,7 @@ export function DeckNav({ open, onOpenChange, current, onSelect, is4K = false }:
         />
         <button
           onClick={() => onOpenChange(true)}
-          className={`pointer-events-auto group rounded-full border border-foreground/15 bg-background/40 backdrop-blur-xl transition-colors hover:border-accent/60 ${is4K ? "mt-6 ml-6 p-5" : "mt-2 ml-5 p-3"}`}
+          className={`pointer-events-auto group rounded-full border border-foreground/15 bg-background/40 backdrop-blur-xl transition-colors hover:border-accent/60 ${is4K ? "mt-6 ml-6 p-5" : "mt-5 ml-5 p-3"}`}
           aria-label="Open contents menu"
         >
           <Menu className={`${is4K ? "h-7 w-7" : "h-5 w-5"} text-foreground/80 transition-transform group-hover:rotate-90`} />
