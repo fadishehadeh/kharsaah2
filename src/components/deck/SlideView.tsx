@@ -57,11 +57,6 @@ export function SlideView({
         <div className={`mx-auto flex min-h-full flex-col justify-center px-5 pb-40 md:pb-44 ${is4K ? "max-w-[1800px] px-24 pt-56 md:pt-64" : "max-w-7xl pt-32 md:px-12 md:pt-36"}`}>
           {slide.layout === "title" && (
             <div className="max-w-4xl -mt-12 md:-mt-16">
-              <Reveal>
-                <p className="font-mono text-lg tracking-[0.42em] text-accent uppercase">
-                  {slide.kicker}
-                </p>
-              </Reveal>
               <Reveal delay={0.1}>
                 <h1 className={`mt-4 font-display leading-[0.95] tracking-tight text-balance ${is4K ? "text-8xl md:text-[10rem]" : "text-5xl md:text-8xl"}`}>
                   {slide.title}
@@ -373,33 +368,31 @@ export function SlideView({
 
           {slide.layout === "rows" && (
             <div className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr]">
-              <div>
-                <Reveal>
+              <Reveal>
+                <TextBox wide>
                   <Kicker slide={slide} />
-                </Reveal>
-                <Reveal delay={0.08}>
                   <h2 className="mt-3 font-display text-3xl tracking-tight md:text-5xl">
                     {slide.title}
                   </h2>
-                </Reveal>
-                <div className="glow-scroll mt-3 max-h-[calc(100vh-22rem)] divide-y divide-foreground/10 border-y border-foreground/10 pr-3 md:max-h-[calc(100vh-24rem)]">
-                  {slide.rows?.map((r, i) => (
-                    <motion.div
-                      key={r.key}
-                      initial={{ opacity: 0, x: -16 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.12 + i * 0.045, duration: 0.45, ease }}
-                      className="grid gap-1 py-3.5 md:grid-cols-[minmax(0,15rem)_1fr] md:gap-6"
-                    >
-                      <p className="font-display text-sm text-accent md:text-base">{r.key}</p>
-                      <p className="text-sm leading-relaxed text-foreground/78">{r.value}</p>
-                    </motion.div>
-                  ))}
-                </div>
-                {slide.caption && !slide.gallery && (
-                  <p className="mt-4 text-xs text-muted-foreground">{slide.caption}</p>
-                )}
-              </div>
+                  <div className="mt-3 divide-y divide-foreground/10 border-y border-foreground/10">
+                    {slide.rows?.map((r, i) => (
+                      <motion.div
+                        key={r.key}
+                        initial={{ opacity: 0, x: -16 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.12 + i * 0.045, duration: 0.45, ease }}
+                        className="grid gap-1 py-3 md:grid-cols-[minmax(0,14rem)_1fr] md:gap-6"
+                      >
+                        <p className="font-display text-sm text-accent md:text-base">{r.key}</p>
+                        <p className="text-sm leading-relaxed text-foreground/90">{r.value}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                  {slide.caption && !slide.gallery && (
+                    <p className="mt-3 text-xs text-muted-foreground">{slide.caption}</p>
+                  )}
+                </TextBox>
+              </Reveal>
               <Reveal delay={0.2}>
                 {slide.gallery ? (
                   <Gallery items={slide.gallery} />
