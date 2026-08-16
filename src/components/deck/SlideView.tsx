@@ -56,9 +56,9 @@ export function SlideView({
       <div data-slide-scroll className="relative z-10 h-full w-full overflow-y-auto overscroll-contain">
         <div className={`mx-auto flex min-h-full flex-col justify-center px-5 pb-40 md:pb-44 ${is4K ? "max-w-[1800px] px-24 pt-56 md:pt-64" : "max-w-7xl pt-32 md:px-12 md:pt-36"}`}>
           {slide.layout === "title" && (
-            <div className="max-w-4xl mt-20 md:mt-28">
+            <div className="max-w-4xl -mt-12 md:-mt-16">
               <Reveal>
-                <p className="font-mono text-xs tracking-[0.42em] text-accent uppercase">
+                <p className="font-mono text-lg tracking-[0.42em] text-accent uppercase">
                   {slide.kicker}
                 </p>
               </Reveal>
