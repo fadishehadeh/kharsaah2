@@ -88,32 +88,45 @@ export function SlideView({
                   {slide.title}
                 </h2>
               </Reveal>
-              <ol className="mt-3 grid gap-x-12 gap-y-1 md:grid-cols-2">
-                {sections.map((title, i) => (
-                  <motion.li
-                    key={title}
-                    initial={{ opacity: 0, x: -18 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.16 + i * 0.05, duration: 0.5, ease }}
-                  >
-                    <button
-                      onClick={() => {
-                        const target = slides.findIndex((s) => s.section === i + 1);
-                        if (target >= 0) onSelect(target);
-                      }}
-                      className="group flex w-full items-baseline gap-5 border-b border-foreground/10 py-3.5 text-left"
-                      data-section={i + 1}
-                    >
-                      <span className="font-mono text-xs text-accent">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="font-display text-lg transition-colors group-hover:text-accent md:text-xl">
-                        {title}
-                      </span>
-                    </button>
-                  </motion.li>
-                ))}
-              </ol>
+              {(() => {
+                const half = Math.ceil(sections.length / 2);
+                const cols = [sections.slice(0, half), sections.slice(half)];
+                return (
+                  <div className="mt-3 flex gap-x-12">
+                    {cols.map((col, colIdx) => (
+                      <ol key={colIdx} className="flex-1">
+                        {col.map((title, rowIdx) => {
+                          const i = colIdx * half + rowIdx;
+                          return (
+                            <motion.li
+                              key={title}
+                              initial={{ opacity: 0, x: -18 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: 0.16 + i * 0.05, duration: 0.5, ease }}
+                            >
+                              <button
+                                onClick={() => {
+                                  const target = slides.findIndex((s) => s.section === i + 1);
+                                  if (target >= 0) onSelect(target);
+                                }}
+                                className="group flex w-full items-baseline gap-5 border-b border-foreground/10 py-3.5 text-left"
+                                data-section={i + 1}
+                              >
+                                <span className="font-mono text-xs text-accent">
+                                  {String(i + 1).padStart(2, "0")}
+                                </span>
+                                <span className="font-display text-lg transition-colors group-hover:text-accent md:text-xl">
+                                  {title}
+                                </span>
+                              </button>
+                            </motion.li>
+                          );
+                        })}
+                      </ol>
+                    ))}
+                  </div>
+                );
+              })()}
             </div>
           )}
 

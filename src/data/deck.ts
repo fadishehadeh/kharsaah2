@@ -194,6 +194,7 @@ export const slides: Slide[] = [
       "The report follows the journey of Al-Kharsaah from concept to completion. It highlights the strategic foresight that guided its development, the engineering excellence that shaped its design, and the environmental and economic value it continues to deliver.",
       "This story addresses the partnerships, people, and innovation that made the project possible. It also reflects on the lessons and insights captured to inform future renewable energy initiatives and support continued innovation.",
     ],
+    caption: "Al-Kharsaah from above",
     media: { kind: "image", src: photo.aerialQatarLogoAlt, alt: "The Al-Kharsaah plant seen from the air, surrounded by open desert" },
   },
 
@@ -257,7 +258,7 @@ export const slides: Slide[] = [
       },
       {
         year: "2020",
-        text: "A company responsible for developing and operating the plant is established.",
+        text: "Siraj 1, the company responsible for developing and operating the plant, is established.",
       },
       {
         year: "2020",
@@ -265,15 +266,11 @@ export const slides: Slide[] = [
       },
       {
         year: "2022",
-        text: "October 18 the plant is energized and begins supplying Qatar's first large-scale solar power to the national grid, initially delivering 400 MW before reaching its full generation milestone of 800 MW.",
+        text: "On 18 October, the plant is energized and begins supplying Qatar's first large-scale solar power to the national grid, initially delivering 400 MW before reaching its full generation milestone of 800 MW.",
       },
       {
         year: "2022",
-        text: "October 25 His Highness Sheikh Tamim bin Hamad Al Thani highlights Al-Kharsaah during the opening of the 51st session of the Shura Council, noting that the project covers 10% of Qatar's electricity consumption.",
-        link: {
-          label: "HH The Amir Inaugurates Shura Council's Ordinary Session",
-          href: "https://www.youtube.com/results?search_query=HH+The+Amir+Inaugurates+Shura+Council%27s+Ordinary+Session",
-        },
+        text: "On 25 October, His Highness Sheikh Tamim bin Hamad Al Thani highlights Al-Kharsaah during the opening of the 51st session of the Shura Council, noting that the project covers 10% of Qatar's electricity consumption.",
       },
       {
         year: "2023",
@@ -317,6 +314,7 @@ export const slides: Slide[] = [
       "In 2022, Al-Kharsaah delivered its first flow of electricity to the national grid. Within months, it reached full operational capacity, providing enough electricity to meet up to 10% of Qatar's peak energy demand and power hundreds of thousands of homes, while reducing carbon emissions by an estimated 26 million metric tons over its lifetime.",
       "Al-Kharsaah generates up to 800 megawatts-peak (MWp) DC, equivalent to 700 megawatts (MW) AC, supplying approximately 2,000 gigawatt-hours (GWh) of clean electricity to the national grid each year.",
     ],
+    caption: "An aerial view",
     media: { kind: "image", src: photo.c140243, alt: "Al-Kharsaah site landscape" },
   },
 
@@ -398,6 +396,7 @@ export const slides: Slide[] = [
       "The results confirmed that Al-Kharsaah offered both the technical and environmental conditions necessary for a high-performing, large-scale solar facility.",
       "Social considerations were a key part of the site studies, including the presence of nearby communities, schools, and local facilities. The assessments reviewed how people use the surrounding area day to day: school travel routes, access roads, and nearby services, ensuring safety and minimal disruption and supporting responsible, long-term development around Al-Kharsaah.",
     ],
+    caption: "Solar arrays",
     media: { kind: "image", src: qatarMap, alt: "Site location study map" },
   },
   {
@@ -438,6 +437,7 @@ export const slides: Slide[] = [
       "The system layout enables future technology upgrades and supports the eventual reuse or recycling of solar components at end of life",
       "Electrical and control systems meet IEC and ISO sustainability standards, ensuring durability and safety in Qatar's desert environment",
     ],
+    caption: "In the field",
     media: { kind: "image", src: photo.c25, alt: "Panel field at Al-Kharsaah" },
   },
   {
@@ -509,6 +509,7 @@ export const slides: Slide[] = [
       "Civil works were designed for a minimum lifespan of at least 30 years, ensuring that during this period no major structural repairs would be required due to wear, fatigue, or material distress.",
       "Advanced materials and construction techniques were used to enhance durability, reduce maintenance needs, and optimize long-term asset integrity.",
     ],
+    caption: "Bifacial, single axis panels",
     media: { kind: "image", src: photo.panelsDiagonal, alt: "Tracker structures carrying long rows of panels" },
   },
   {
@@ -525,6 +526,7 @@ export const slides: Slide[] = [
       "QatarEnergy conducted detailed surveys of the surrounding access roads to assess their capacity and condition, developing a comprehensive transport and logistics plan that addressed weight restrictions, turning radii, and timing constraints. In coordination with local authorities, the team obtained all necessary transport permits for oversized equipment.",
       "Within the site, QatarEnergy designed and constructed a network of internal roads engineered to handle frequent vehicle movements while minimizing dust and soil erosion, essential for maintaining PV panel performance and long-term accessibility.",
     ],
+    caption: "Solar panels at Al-Kharsaah",
     media: { kind: "image", src: photo.c29, alt: "Access road through the solar field" },
   },
   {
@@ -674,9 +676,9 @@ export const slides: Slide[] = [
       "Al-Kharsaah brings together all three of QatarEnergy's sustainability pillars:",
     ],
     bullets: [
-      "Climate change and environmental action: significant reduction of greenhouse gas emissions, a minimal land and water footprint, and efficient lifecycle design",
-      "Operational responsibility: safe, reliable, and efficient plant operations, underpinned by strong asset integrity, performance monitoring, and international standards",
-      "Social and economic development: local employment, technical skills, innovation, and long-term knowledge transfer supporting national capacity building",
+      "Climate change and environmental action",
+      "Operational responsibility",
+      "Social and economic development",
     ],
     media: { kind: "image", src: photo.c140230, alt: "Aerial view of the Al-Kharsaah plant" },
   },
